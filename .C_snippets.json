@@ -12,7 +12,7 @@
 
 		"File-Header":{
 			"prefix": "file-header",
-			"body": ["// -----------------------------------------------------------------------------\n// filename:    ${1:<filename>}\n//\n// Description: ${2:<description>}\n//\n// Group:       Clemens Lechner\n//\n// SudentID:    Tippler Manuel | 12203229\n// -----------------------------------------------------------------------------"],
+			"body": ["// -----------------------------------------------------------------------------\n// filename:    ${1:<filename>}\n//\n// Description: ${2:<description>}\n//\n// Group:       ${3:tutor}\n//\n// SudentID:    ${4:name}| ${5:studentID}\n// -----------------------------------------------------------------------------"],
 		},
 
 		"Function-Header":{
