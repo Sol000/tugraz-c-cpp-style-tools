@@ -12,18 +12,25 @@ Checks:  "fuchsia-trailing-return,
           readability-suspicious-call-argument,
           clang-analyzer-core.DynamicTypePropagation"
 CheckOptions:
+  - { key: readability-identifier-naming.ConstantCase, value: UPPER_CASE }
   - { key: readability-identifier-naming.FunctionCase, value: camelBack }
-  - { key: readability-identifier-naming.MacroDefinitionCase, value: UPPER_CASE }
-  - { key: readability-identifier-naming.LocalVariableCase, value: lower_case }
-  - { key: readability-identifier-naming.MemberCase, value: lower_case }
-  - { key: readability-identifier-naming.MemberSuffix, value: _ }
-  - { key: readability-identifier-naming.StructCase, value: CamelCase } # seems to be broken https://github.com/llvm/llvm-project/issues/55422 - but i think it makes sense to keep it here
-  - { key: readability-identifier-naming.StructPrefix, value: _ } # same issue here
-  - { key: readability-identifier-naming.StructSuffix, value: _ } # and here
   - { key: readability-identifier-naming.EnumCase, value: CamelCase }
   - { key: readability-identifier-naming.EnumPrefix, value: _ }
   - { key: readability-identifier-naming.EnumSuffix, value: _ }
+  - { key: readability-identifier-naming.EnumConstantCase, value: UPPER_CASE }
+  - { key: readability-identifier-naming.PrivateMemberPrefix, value: _ }
+  - { key: readability-identifier-naming.PrivateMethodPrefix, value: _ }
+  - { key: readability-identifier-naming.ParameterCase, value: lower_case }
+  - { key: readability-identifier-naming.MacroDefinitionCase, value: UPPER_CASE }
+  - { key: readability-identifier-naming.LocalVariableCase, value: lower_case }
+  - { key: readability-identifier-naming.MemberCase, value: lower_case }
+  - { key: readability-identifier-naming.StructCase, value: CamelCase }
+  - { key: readability-identifier-naming.StructPrefix, value: _ }
+  - { key: readability-identifier-naming.StructSuffix, value: _ }
   - { key: readability-identifier-naming.TypedefCase, value: CamelCase }
+  - { key: readability-identifier-naming.UnionCase, value: CamelCase }
+  - { key: readability-identifier-naming.UnionPrefix, value: _ }
+  - { key: readability-identifier-naming.UnionSuffix, value: _ }
   - { key: readability-function-size.LineThreshold, value: 80 }
 
 

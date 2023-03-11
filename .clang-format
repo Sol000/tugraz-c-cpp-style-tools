@@ -1,15 +1,28 @@
-BasedOnStyle: LLVM
-ColumnLimit: 120
-IndentWidth: 2
-BreakBeforeBraces: Allman
-AllowShortBlocksOnASingleLine: Empty
-AllowShortFunctionsOnASingleLine: Empty
-BinPackParameters: false
-BinPackArguments : false
 AlignConsecutiveMacros: AcrossEmptyLines
 AllowAllArgumentsOnNextLine: true
+AllowShortBlocksOnASingleLine: Empty
+AllowShortFunctionsOnASingleLine: Empty
+BasedOnStyle: LLVM
+BinPackArguments : false
+BinPackParameters: false
+BreakBeforeBraces: Allman
+ColumnLimit: 120
+Cpp11BracedListStyle: false
+DerivePointerAlignment: true
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: Always
+IncludeBlocks: Merge
+IndentCaseLabels: true
+IndentWidth: 2
+InsertNewlineAtEOF: true
+ReflowComments: true
+SeparateDefinitionBlocks: Always
+SpaceAfterCStyleCast: false
 SpaceBeforeAssignmentOperators: true
+SpaceBeforeCpp11BracedList: true
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
 SpaceBeforeSquareBrackets: false
 SpacesBeforeTrailingComments: 4
-PointerAlignment: Left
+SpacesInContainerLiterals: true
 

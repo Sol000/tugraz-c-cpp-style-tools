@@ -1,6 +1,6 @@
 # Manual formatting is annoying
 
-That's why this repo has some tools to avoid any [style guide](https://tc.tugraz.at/main/mod/page/view.php?id=55770) violations in C for the ESP Assignments.
+That's why this repo has some tools to avoid any [ESP](https://tc.tugraz.at/main/mod/page/view.php?id=55770) or [OOP](https://tc.tugraz.at/main/mod/book/view.php?id=341931&chapterid=1176) Style-Guide violations in C or CPP for the ESP/OOP Assignments.
 
 - `clang-format` (https://clang.llvm.org/docs/ClangFormat.html)
   can autoformat the code, e.g. putting braces on the correct line, having max. 120 characters per line
@@ -12,7 +12,7 @@ That's why this repo has some tools to avoid any [style guide](https://tc.tugraz
 
   _rules are defined in the `.clang-tidy` file._
 
-- `c-snippets`([style guide](https://tc.tugraz.at/main/mod/page/view.php?id=55770) conform)
+- `c/cpp-snippets`
 things like file- or function-header comment. For fast commenting your code
 To use this look in the `C_snippets.json` file for more information.
 
@@ -35,16 +35,33 @@ This is not complete yet, and I did not test it a lot either - it should just ma
     - or `Download the VSIX` file and install it manually by opening the VSCode-commandline [Shift]+[Strg]+[P] and search for "VSIX". Select the "Install from VSIX...", and now you can navigate in the file explorer to the VSIX-file to install it.
 
 - ### clang-format:
-	  sudo apt-cache search clang-format
-	  sudo apt-get install clang-format-<VERSION>
-	  whereis clang-format-<VERSION>
+    add the following to your `/etc/apt/sources.list`:
+
+      deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy main
+      deb-src http://apt.llvm.org/jammy/ llvm-toolchain-jammy main
+      # 14
+      deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy-14 main
+      deb-src http://apt.llvm.org/jammy/ llvm-toolchain-jammy-14 main
+      # 15
+      deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy-15 main
+      deb-src http://apt.llvm.org/jammy/ llvm-toolchain-jammy-15 main
+
+    then type following commands:
+
+      sudo apt update
+      sudo apt-cache search clang-format
+      sudo apt-get install clang-format-<VERSION>
+      whereis clang-format-<VERSION>
+
+
+    >NOTE: The requiered version of clang-format is 16
 
 
 ## 2.) Cloning the tools
 
 direct to your `ESP-folder` via Terminal and then clone the repository:
 
-    git clone https://github.com/samuelfahrngruber/tugraz-esp-c-style-tools.git
+    git clone https://github.com/Sol000/tugraz-c-cpp-style-tools.git
 
 after doing this drag all the files from `tugraz-esp-c-style-tools` into the `ESP-folder`.
 
@@ -63,6 +80,7 @@ after doing this drag all the files from `tugraz-esp-c-style-tools` into the `ES
       "C_Cpp.codeAnalysis.runAutomatically": true,
       "C_Cpp.codeAnalysis.clangTidy.enabled": true,
       "clang-format.language.c.enable": true,
+      "clang-format.language.cpp.enable": true,
       "clang-format.style": "file",
       "clang-tidy.fixOnSave": true,
       "[c]": {
@@ -70,5 +88,11 @@ after doing this drag all the files from `tugraz-esp-c-style-tools` into the `ES
           "editor.wordBasedSuggestions": false,
           "editor.suggest.insertMode": "replace",
           "editor.semanticHighlighting.enabled": true,
-      }
+      },
+      "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.wordBasedSuggestions": false,
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true
+    },
 
