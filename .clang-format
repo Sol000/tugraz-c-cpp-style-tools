@@ -14,7 +14,6 @@ EmptyLineBeforeAccessModifier: Always
 IncludeBlocks: Merge
 IndentCaseLabels: true
 IndentWidth: 2
-InsertNewlineAtEOF: true
 ReflowComments: true
 SeparateDefinitionBlocks: Always
 SpaceAfterCStyleCast: false

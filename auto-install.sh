@@ -1,0 +1,6 @@
+echo remove old .clang-format and .clang-tidy Files...
+rm -rf ../.clang-*
+echo copy .clang-format and .clang-tidy in root dir...
+cp .clang-* ..
+
+echo Done.
